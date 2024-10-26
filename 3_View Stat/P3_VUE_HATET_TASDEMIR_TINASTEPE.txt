@@ -1,0 +1,22 @@
+CREATE VIEW VUE_NOTES_ETUDIANTS AS
+SELECT 
+    CONCAT(e.NOM, ' ', e.PRENOM) as "nom_complet",
+    e.ADRESSEVILLEETUDIANT AS ville,
+    p.NOMPAYS AS "pays",
+    e.LATITUDE,
+    e.LONGITUDE,
+    g.LIBELLEGROUPE AS "groupe",
+    CONCAT(m.CODEMODULE, ' - ', m.INTITULEMODULE) AS "code_libelle_module",
+    CASE 
+        WHEN m.CODEMODULE LIKE 'SAé%' THEN 'SAé'
+        ELSE 'ressource'
+    END AS "type_module",
+    ev.LIBELLEEVAL AS "libelle_evaluation",
+    n.NOTE
+FROM 
+    NOTE_SUR n
+JOIN ETUDIANT e ON n.NUMETUDIANT = e.NUMETUDIANT
+JOIN EVALUATION ev ON n.NUMEVAL = ev.NUMEVAL
+JOIN MODULE m ON ev.NUMMODULE = m.NUMMODULE
+JOIN GROUPE g ON e.NUMGROUPE = g.NUMGROUPE
+JOIN PAYS p ON e.NUMPAYS = p.NUMPAYS;
