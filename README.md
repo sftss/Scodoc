@@ -4,6 +4,6 @@ Scodoc is a web-based platform developed for teachers to efficiently manage stud
 To enhance data accessibility, we imported a database view into Excel, enabling calculations and graphical analysis, and created two Power BI dashboards that visually represent key information from the same data view. This end-to-end project demonstrates robust data visualization to simplify administrative workflows in educational settings.
 
 ## Authors
-* **Lucas Hatet** - [Lucopecto](https://github.com/lucopecto)
-* **Sefer Tasdemir** - [Sefer](https://github.com/sftss)
-* **Feyza Tinastepe**
+* **H. Lucas** - [Lucopecto](https://github.com/lucopecto)
+* **T. Sefer** - [Sefer](https://github.com/sftss)
+* **T. Feyza** - [Feyy7435](https://github.com/feyy7435)
